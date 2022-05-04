@@ -15,6 +15,6 @@ def run(options):
         options.read2,
         options.prefix,
         clean = (not options.noclean),
-        cov = options.coverage
+        cov = 20 if options.coverage is None else options.coverage
     )
     sero.run()
